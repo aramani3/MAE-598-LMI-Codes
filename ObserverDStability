@@ -1,3 +1,5 @@
+%MATLAB-YALMIP example implementation of the continuous-time D-stability controller.
+
 A = [-1.3410 0.9933 0 -0.1689 -0.2518
     43.2230 -0.8693 0 -17.2510 -1.5766
     1.3410 0.0067 0 0.1689 0.2518
