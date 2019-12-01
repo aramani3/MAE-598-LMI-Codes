@@ -19,7 +19,7 @@ ts=6;p_os=0.1;tr=1;r=(1.8/tr);alpha=(4.6/ts);c=(log(p_os)/pi);
 F1=[F1,[(-r*P3),(A*P3+B*Z);(A*P3+B*Z)',(-r*P3)]<=1e-5*eye(2*n)];
 F1=[F1,A*P3+B*Z+(A*P3+B*Z)'+2*alpha*P3<=1e-5*eye(n)];
 F1=[F1,[A*P3+B*Z+(A*P3+B*Z)',c*(A*P3+B*Z-(A*P3+B*Z)');c*((A*P3+B*Z)'-(A*P3+B*Z)),A*P3+B*Z+(A*P3+B*Z)']<=1e-5*eye(2*n)];
-optimize(F1,[],options);
+optimize(F1,[],options);%execute the given problem
 Z=value(Z);P3=value(P3);
 K=Z*inv(P3)%display the resulting controller K matrix
 ApBK_eig=eig(A+B*K)%display the resulting eigenvalues of A+BK
